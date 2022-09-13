@@ -1,26 +1,89 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 import logo from '../assets/img/logo.png';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 type Props = {
   children?: ReactNode;
   pages: string[];
 };
 const pages = ['O Grau', 'Cursos', 'Estude no Grau', 'Pra Começar'];
+const ResponsiveAppBar = (props: Props) => {
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+    null
+  );
 
-export default function NavBar({ children }: Props) {
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="relative" color="inherit" className="bg-primary">
+    <AppBar position="static" color="inherit" className="">
+      <Container maxWidth="xl">
         <Toolbar>
-          <Image src={logo} loading="lazy" />
+          <Box
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            className="bg-primary"
+          >
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+              className="bg-primary"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left'
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left'
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' }
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Image src={logo} />
           <Box
             sx={{
               flexGrow: 1,
@@ -39,11 +102,18 @@ export default function NavBar({ children }: Props) {
               </Button>
             ))}
           </Box>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              display: { sm: 'none', xs: 'none', md: 'block', xl: 'block' }
+            }}
+          >
             Inscreva-se
           </Button>
         </Toolbar>
-      </AppBar>
-    </Box>
+      </Container>
+    </AppBar>
   );
-}
+};
+export default ResponsiveAppBar;

@@ -10,9 +10,7 @@ const theme = createTheme({
     secondary: {
       main: '#FEC906'
     },
-    error: {
-      main: red.A400
-    },
+
     common: {
       white: '#FFFFFF',
       black: '#312F31'
@@ -20,6 +18,15 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Rubik, sans-serif'
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536
+    }
   }
 });
 
