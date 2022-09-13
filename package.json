@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "@emotion/cache": "latest",
-    "@emotion/server": "latest",
     "@emotion/react": "^11.10.4",
+    "@emotion/server": "latest",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
@@ -21,7 +21,10 @@
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "autoprefixer": "^10.4.9",
+    "postcss": "^8.4.16",
     "sass": "^1.54.9",
+    "tailwindcss": "^3.1.8",
     "typescript": "4.3.2"
   }
 }
