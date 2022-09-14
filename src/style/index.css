@@ -1,4 +1,4 @@
 @import 'base';
 @import 'reset';
 @import 'typography';
-@import '../lib//mui/mui.css';
+@import '@/lib//mui/mui.css';
