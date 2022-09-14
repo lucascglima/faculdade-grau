@@ -1,14 +1,12 @@
 import React, { ReactNode } from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
-
-import NavBar from './Navbar';
+import AppNavBar from '../components/navbar/AppNavbar';
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title = 'Faculdade Grau' }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -16,9 +14,9 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
-      <NavBar />
+      <AppNavBar />
     </header>
-    {children}
+    <main>{children}</main>
     <footer>
       <hr />
       <span>I'm here to stay (Footer)</span>
