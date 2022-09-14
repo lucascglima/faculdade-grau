@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import AppNavBar from '../components/navbar/AppNavbar';
+import AppNavBar from '@/components/navbar/AppNavbar';
 type Props = {
   children?: ReactNode;
   title?: string;

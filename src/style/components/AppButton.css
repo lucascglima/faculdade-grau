@@ -1,0 +1,10 @@
+.MuiButton-root {
+  color: #312f31;
+  border-radius: 1000px !important;
+}
+.MuiButton-sizeSmall.MuiButton-sizeSmall {
+  padding: 8px 16px;
+}
+.MuiButton-sizeLarge.MuiButton-sizeLarge {
+  padding: 20px;
+}

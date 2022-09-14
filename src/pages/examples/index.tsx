@@ -1,6 +1,5 @@
-import Layout from '../../layouts/default';
-import AppButton from './../../components/button/AppButton';
-import type { AppButtonProps } from './../../components/button/AppButton';
+import Layout from '@/layouts/default';
+import AppButton from '@/components/button/AppButton';
 
 const ExamplesPage = () => (
   <Layout title="Examples  | Faculdade Grau">

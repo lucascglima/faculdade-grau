@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
-import logo from '../assets/img/logo.png';
+import logo from '@/assets/img/logo.png';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
