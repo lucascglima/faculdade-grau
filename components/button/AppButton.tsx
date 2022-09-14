@@ -18,14 +18,6 @@ export type AppButtonProps = {
     | 'error'
     | 'info'
     | 'warning';
-  textColor?:
-    | 'inherit'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'error'
-    | 'info'
-    | 'warning';
   size: ButtonSizes;
   icon?: boolean;
   disabled?: boolean;
@@ -34,16 +26,13 @@ export type AppButtonProps = {
 };
 
 const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
-  (
-    { children, type, bgColor, textColor, size, icon, disabled, width, label },
-    ref
-  ) => {
-    const textStyle = disabled ? `text-dark-medium` : `text-${textColor}`;
-    const bgStyle = disabled ? `bg-light-opacity-20` : `bg-${bgColor}`;
-    const sizeStyle =
-      size == 'large' ? 'h-[64px] p-[20px]' : 'h-[36px] py-[8px] px-[16px]';
-    const widthStyle = width ? `w-[${width}]` : `w-[100%]`;
-    const btnStyle = `${textStyle} ${bgStyle} ${bgStyle}  ${sizeStyle} ${widthStyle}  AppBtn`;
+  ({ children, type, bgColor, size, icon, disabled, width, label }, ref) => {
+    // const textStyle = disabled ? `text-dark-medium` : `text-${textColor}`;
+    // const bgStyle = disabled ? `bg-light-opacity-20` : `bg-${bgColor}`;
+    // const sizeStyle =
+    //   size == 'large' ? 'h-[64px] p-[20px]' : 'h-[36px] py-[8px] px-[16px]';
+    // const widthStyle = width ? `w-[${width}]` : `w-[100%]`;
+    // const btnStyle = `${textStyle} ${bgStyle} ${bgStyle}  ${sizeStyle} ${widthStyle}  AppBtn`;
 
     return (
       <Button

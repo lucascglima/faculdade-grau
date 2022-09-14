@@ -7,14 +7,12 @@ const ExamplesPage = () => (
     <div>Examples</div>
     <AppButton
       type="contained"
-      textColor="primary"
       bgColor="primary"
       size="large"
       label="Botão Exemplos"
     />
     <AppButton
       type="contained"
-      textColor="secondary"
       bgColor="secondary"
       size="small"
       label="Botão Exemplos 2 "
