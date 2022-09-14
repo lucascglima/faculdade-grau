@@ -17,7 +17,7 @@ type Props = {
   pages: string[];
 };
 const pages = ['O Grau', 'Cursos', 'Estude no Grau', 'Pra Começar'];
-const ResponsiveAppBar = (props: Props) => {
+const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
