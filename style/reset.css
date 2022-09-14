@@ -66,6 +66,10 @@ video {
   text-size-adjust: none;
 }
 
+html,body {
+  background-color: #2f3b4c !important;
+}
+
 footer,
 header,
 nav,
