@@ -5,7 +5,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import theme from '@/lib/mui/theme';
-import createEmotionCache from '@/lib/mui/createEmotionCache';
+import createEmotionCache from '../lib/mui/createEmotionCache';
 import '@/style/index.css';
 import { AppProps } from 'next/app';
 // Client-side cache, shared for the whole session of the user in the browser.
