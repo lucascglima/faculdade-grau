@@ -8,3 +8,14 @@ export type User = {
   id: number
   name: string
 }
+
+
+
+export interface NavBarItems {
+  label:string 
+  link:string 
+  subMenu?: Array<NavBarItems>
+}
+export interface ResponsiveAppBarProps {
+  navBarItems: NavBarItems[]
+}

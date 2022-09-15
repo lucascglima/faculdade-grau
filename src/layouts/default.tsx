@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import AppNavBar from '@/components/navbar/AppNavbar';
+import ResponsiveAppBar from '@/components/navbar/AppNavbar';
+import { dataNavBar } from '../mock/mockData'
 type Props = {
   children?: ReactNode;
   title?: string;
@@ -14,7 +15,7 @@ const Layout = ({ children, title = 'Faculdade Grau' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
-      <AppNavBar />
+      <ResponsiveAppBar navBarItems={dataNavBar} />
     </header>
     <main>{children}</main>
     <footer>

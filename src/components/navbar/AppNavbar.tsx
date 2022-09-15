@@ -1,4 +1,3 @@
-import React, { ReactNode } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,16 +7,16 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
+import React, { ReactNode } from 'react';
+import logo from '@/assets/img/logo.png';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import logo from '@/assets/img/logo.png';
+import { NavBarItems, ResponsiveAppBarProps } from '../../interfaces/index'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-type Props = {
-  children?: ReactNode;
-  pages: string[];
-};
+
 const pages = ['O Grau', 'Cursos', 'Estude no Grau', 'Pra Começar'];
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({ navBarItems }:ResponsiveAppBarProps) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -38,15 +37,16 @@ const ResponsiveAppBar = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  
   };
+
   return (
     <AppBar position="static" color="inherit" className="">
       <Container maxWidth="xl">
         <Toolbar>
           <Box
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-            className="bg-primary"
-          >
+            className="bg-primary">
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -54,8 +54,7 @@ const ResponsiveAppBar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              className="bg-primary"
-            >
+              className="bg-primary">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -74,8 +73,8 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
+
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
@@ -84,31 +83,24 @@ const ResponsiveAppBar = () => {
             </Menu>
           </Box>
           <Image src={logo} />
-          <Box
-            sx={{
-              flexGrow: 1,
-              py: 2,
-              px: 3,
-              ml: 6,
-              display: { xs: 'none', md: 'flex' }
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{ my: 2, px: 2, color: 'common.black', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          <Box sx={{flexGrow: 1,py: 2,px: 3,ml: 6,display: { xs: 'none', md: 'flex' }}}>
+            {
+              navBarItems.map((item:NavBarItems) => {
+                return(
+                  <Button key={item.link} sx={{ my: 2, px: 2, color: 'common.black', display: 'flex' }}>
+                    {item.label}
+                   { item.subMenu ? <KeyboardArrowDownIcon/> : '' }
+                  </Button>
+                )
+              })
+            }
           </Box>
           <Button
             variant="contained"
             color="secondary"
             sx={{
               display: { sm: 'none', xs: 'none', md: 'block', xl: 'block' }
-            }}
-          >
+            }}>
             Inscreva-se
           </Button>
         </Toolbar>
