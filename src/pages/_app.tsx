@@ -4,29 +4,39 @@ import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import theme from '@/lib/mui/theme';
-import createEmotionCache from '@/lib/mui/createEmotionCache';
-import '@/style/index.css';
+import theme from '../lib/mui/theme';
+import '../style/index.css';
+import createEmotionCache from '../lib/mui/createEmotionCache';
+import { NextPage } from 'next';
 import { AppProps } from 'next/app';
+import { EmotionCache } from '@emotion/react';
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+type AppPropsWithCache = AppProps & {
+  Component: NextPage;
+  emotionCache?: EmotionCache;
+};
 
-export default function MyApp(props) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
+const MyApp = ({
+  Component,
+  emotionCache = clientSideEmotionCache,
+  pageProps
+}: AppPropsWithCache) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
   );
-}
+};
+
+export default MyApp;
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
