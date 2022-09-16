@@ -1,0 +1,24 @@
+.custom-tag:not(.custom-disabled-tag) {
+  cursor: pointer;
+}
+.custom-tag.light.custom.disabled-tag {
+  background-color: #000000;
+}
+.custom-tag > span:hover {
+  color: #312f31;
+}
+.custom-tag:hover {
+  background-color: #ffffff;
+  border: 1px solid #312f31;
+}
+.custom-tag.light:not(.custom-disabled-tag, :hover) > span {
+  color: #ffffff;
+}
+.custom-tag.dark > span {
+  color: theme('colors.dark') !important;
+}
+.Mui-disabled {
+  background: rgba(0, 0, 0, 0.2);
+  color: #4b4b4b;
+  opacity: 1 !important;
+}

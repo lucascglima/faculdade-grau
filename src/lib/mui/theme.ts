@@ -27,6 +27,7 @@ const theme = createTheme({
     }
   },
   components: {
+    // Button
     MuiButton: {
       styleOverrides: {
         root: ({ ownerState }) => ({
@@ -36,7 +37,7 @@ const theme = createTheme({
               ':hover': {
                 backgroundColor: '#F07800',
                 border: '1px solid #312F31',
-                'box-shadow': 'none'
+                boxShadow: 'none'
               },
               ':focus': {
                 color: '#FFFFFF'
@@ -89,6 +90,15 @@ const theme = createTheme({
               }
             })
         })
+      }
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          px: '8px',
+          py: '2px',
+          borderRadius: '1000px'
+        }
       }
     }
   }

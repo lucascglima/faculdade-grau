@@ -3,10 +3,15 @@ module.exports = {
   webpack(config, options) {
     config.module.rules.push({
       test: /\.ya?ml$/,
-      type: "json",
-      use: "yaml-loader",
+      type: 'json',
+      use: 'yaml-loader'
     });
+    // withCSS({
+    //   cssLoaderOptions: {
+    //     url: false
+    //   }
+    // });
 
     return config;
-  },
+  }
 };

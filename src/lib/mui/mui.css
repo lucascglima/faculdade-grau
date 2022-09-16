@@ -1,3 +1,4 @@
+@import '../../../src//style/components/index.css';
 .MuiButton-root {
   color: #312f31;
   border-radius: 1000px !important;
@@ -7,4 +8,8 @@
 }
 .MuiButton-sizeLarge.MuiButton-sizeLarge {
   padding: 20px;
+}
+.Mui-disabled .dark {
+  color: '#4B4B4B' !important;
+  background: 'black' !important;
 }

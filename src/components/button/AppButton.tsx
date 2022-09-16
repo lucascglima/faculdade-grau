@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
 import Button from '@mui/material/Button';
-import '@/style/components/AppButton.module.css';
+// import '@/style/components/AppButton.css';
 
 import ArrowForwardOutlined from '@mui/icons-material/ArrowForwardOutlined';
 import type { TailwindColors } from '../../types';
@@ -28,23 +28,14 @@ export type AppButtonProps = {
 };
 
 const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
-  (
-    { children, type, bgColor, size, icon, disabled, width, label, style },
-    ref
-  ) => {
-    // const textStyle = disabled ? `text-dark-medium` : `text-${textColor}`;
-    // const bgStyle = disabled ? `bg-light-opacity-20` : `bg-${bgColor}`;
-    // const sizeStyle =
-    //   size == 'large' ? 'h-[64px] p-[20px]' : 'h-[36px] py-[8px] px-[16px]';
-    // const widthStyle = width ? `w-[${width}]` : `w-[100%]`;
-    // const btnStyle = `${textStyle} ${bgStyle} ${bgStyle}  ${sizeStyle} ${widthStyle}  AppBtn`;
-
+  ({ children, type, bgColor, size, icon, disabled, label, style }, ref) => {
+    const custom = `${style} custom-button`;
     return (
       <Button
         disableFocusRipple={true}
         disableElevation={true}
         variant={type}
-        className={style}
+        className={custom}
         color={bgColor}
         disabled={disabled}
         size={size}

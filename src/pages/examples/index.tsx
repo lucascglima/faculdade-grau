@@ -1,5 +1,6 @@
 import Layout from '@/layouts/default';
 import AppButton from '@/components/button/AppButton';
+import AppTag from '@/components/tag/AppTag';
 
 const ExamplesPage = () => (
   <Layout title="Examples  | Faculdade Grau">
@@ -34,6 +35,37 @@ const ExamplesPage = () => (
       disabled={true}
       style="dark"
       label="Desabilitado Secondary Dark "
+      icon={true}
+    />
+    <div>Examples Chips</div>
+
+    <AppTag
+      label="Chip Dark"
+      type="filled"
+      color="primary"
+      disabled={true}
+      style="dark"
+    />
+    <AppTag
+      label="Chip Dark"
+      type="filled"
+      color="primary"
+      disabled={false}
+      style="dark"
+    />
+    <AppTag
+      label="Chip light"
+      type="filled"
+      color="primary"
+      disabled={true}
+      style="light"
+    />
+    <AppTag
+      label="Chip light"
+      type="filled"
+      color="primary"
+      disabled={false}
+      style="light"
     />
   </Layout>
 );
