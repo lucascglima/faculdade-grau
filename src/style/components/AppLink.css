@@ -1,0 +1,25 @@
+.custom-link {
+  cursor: pointer;
+  color: theme('colors.dark');
+  padding: 8px 0px 8px 4px;
+  align-items: center;
+  display: inline-flex;
+  gap: 4px;
+}
+.custom-link.light.custom.disabled-link {
+  color: theme('colors.dark-medium');
+}
+.custom-link.light:active,
+.custom-link.light:focus {
+  color: theme('colors.secondary');
+}
+.custom-link.dark:active,
+.custom-link.dark:focus {
+  color: theme('colors.primary');
+}
+.custom-link.light:hover {
+  color: theme('colors.primary');
+}
+.custom-link.dark:hover {
+  color: theme('colors.secondary');
+}

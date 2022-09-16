@@ -5,7 +5,6 @@ export type ChipType = 'light' | 'dark';
 
 export type AppTagProps = {
   color: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning';
-
   type: 'outlined' | 'filled';
   style: ChipType;
   disabled?: boolean;

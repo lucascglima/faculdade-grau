@@ -1,6 +1,7 @@
 import Layout from '@/layouts/default';
 import AppButton from '@/components/button/AppButton';
 import AppTag from '@/components/tag/AppTag';
+import AppLink from '@/components/link/AppLink';
 
 const ExamplesPage = () => (
   <Layout title="Examples  | Faculdade Grau">
@@ -67,6 +68,12 @@ const ExamplesPage = () => (
       disabled={false}
       style="light"
     />
+    <div>Examples Chips</div>
+
+    <AppLink href="#" label="Link Dark" disabled={true} style="dark" />
+    <AppLink href="#" label="Link Dark" disabled={false} style="dark" />
+    <AppLink href="#" label="Link light" disabled={true} style="light" />
+    <AppLink href="#" label="Link light" disabled={false} style="light" />
   </Layout>
 );
 

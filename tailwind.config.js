@@ -16,7 +16,7 @@ module.exports = {
       secondary: '#FEC906',
       black: '##000000',
       dark: '#312F31',
-      'dark-medium': '##4B4B4B',
+      'dark-medium': '#4B4B4B',
       'dark-light': '#909090',
       'light-opacity-10': '#00000033',
       'light-opacity-20': '#00000033',
