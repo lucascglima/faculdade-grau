@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
 import Button from '@mui/material/Button';
+import '@/style/components/AppButton.module.css';
 
 import ArrowForwardOutlined from '@mui/icons-material/ArrowForwardOutlined';
 import type { TailwindColors } from '../../types';
@@ -23,10 +24,14 @@ export type AppButtonProps = {
   disabled?: boolean;
   width?: string;
   label?: ReactNode;
+  style: 'light' | 'dark';
 };
 
 const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
-  ({ children, type, bgColor, size, icon, disabled, width, label }, ref) => {
+  (
+    { children, type, bgColor, size, icon, disabled, width, label, style },
+    ref
+  ) => {
     // const textStyle = disabled ? `text-dark-medium` : `text-${textColor}`;
     // const bgStyle = disabled ? `bg-light-opacity-20` : `bg-${bgColor}`;
     // const sizeStyle =
@@ -36,8 +41,10 @@ const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
 
     return (
       <Button
+        disableFocusRipple={true}
+        disableElevation={true}
         variant={type}
-        className="flex"
+        className={style}
         color={bgColor}
         disabled={disabled}
         size={size}

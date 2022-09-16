@@ -9,7 +9,6 @@ const theme = createTheme({
     secondary: {
       main: '#FEC906'
     },
-
     common: {
       white: '#FFFFFF',
       black: '#312F31'
@@ -25,6 +24,72 @@ const theme = createTheme({
       md: 900,
       lg: 1200,
       xl: 1536
+    }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'primary' && {
+              backgroundColor: '#F07800',
+              ':hover': {
+                backgroundColor: '#F07800',
+                border: '1px solid #312F31',
+                'box-shadow': 'none'
+              },
+              ':focus': {
+                color: '#FFFFFF'
+              },
+              ':disabled': {
+                color: '#4b4b4b',
+                backgroundColor: '#00000033'
+              }
+            }),
+          ...(ownerState.variant === 'contained' &&
+            ownerState.className === 'dark' && {
+              ':focus': {
+                background: '#FFFFFF',
+                color: '#F07800'
+              },
+              ':disabled': {
+                background: '#F07800',
+                opacity: '0.2',
+                color: '#312F31'
+              }
+            }),
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'secondary' && {
+              backgroundColor: '#FEC906',
+              ':hover': {
+                backgroundColor: '#FEC906',
+                border: '1px solid #312F31',
+                'box-shadow': 'none'
+              },
+              ':focus': {
+                color: '#FFFFFF'
+              },
+              ':disabled': {
+                color: '#4b4b4b',
+                backgroundColor: '#00000033'
+              }
+            }),
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'secondary' &&
+            ownerState.className === 'dark' && {
+              backgroundColor: '#FEC906',
+              ':focus': {
+                background: '#FFFFFF',
+                color: '#F07800'
+              },
+              ':disabled': {
+                background: '#FEC906',
+                opacity: '0.2',
+                color: '#312F31'
+              }
+            })
+        })
+      }
     }
   }
 });
