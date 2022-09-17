@@ -1,9 +1,11 @@
 .big-number {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 80px;
   line-height: 88px;
 }
 .big-number-bold {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 80px;
   line-height: 88px;
@@ -11,12 +13,14 @@
 
 h1,
 .h1 {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 48px;
   line-height: 60px;
 }
 
 .h1-medium {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 48px;
   line-height: 60px;
@@ -24,11 +28,13 @@ h1,
 
 h2,
 .h2 {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 32px;
   line-height: 44px;
 }
 .h2-medium {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
@@ -36,45 +42,53 @@ h2,
 
 h3,
 .h3 {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
 }
 .h3-medium {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
 }
 h4,
 .h4 {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
 }
 .h4-medium {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
 }
 /* Body 1 */
 .body {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
 }
 .body-medium {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
 }
 /* Body 2 */
 .body-small {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 13px;
   line-height: 20px;
 }
 
 .body-small-medium {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 13px;
   line-height: 20px;
@@ -82,12 +96,14 @@ h4,
 
 /* Body 3 */
 .smaller {
+  font-family: 'Rubik';
   font-weight: 500;
   font-size: 11px;
   line-height: 20px;
 }
 .smaller-medium {
-  font-weight: 400;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 11px;
   line-height: 20px;
 }

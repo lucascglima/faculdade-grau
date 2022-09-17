@@ -3,3 +3,4 @@
 @import 'typography';
 @import '../lib/mui/mui.css';
 @import './components/index.css';
+@import './pages/index.css';
