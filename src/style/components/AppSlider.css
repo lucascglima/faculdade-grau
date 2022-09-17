@@ -54,13 +54,14 @@
   background-color: theme('colors.primary');
 }
 .custom-slider-left {
-  padding-top: 200px;
-  padding-left: 140px;
+  padding-top: 180px;
+  padding-left: 130px;
 }
 .custom-slider-big-text {
-  display: inline-block;
+  display: unset;
   width: 400px;
   text-align: start;
+  align-items: flex-start;
 }
 .custom-slider-box-cta {
   display: flex;
@@ -74,11 +75,11 @@
   color: theme('colors.secondary');
 }
 .text-cta {
-  display: inline-block;
+  display: block;
 }
 
 .text-cta-yellow {
-  padding-right: 2px;
+  padding-right: 8px;
 }
 
 .custom-slider-right {

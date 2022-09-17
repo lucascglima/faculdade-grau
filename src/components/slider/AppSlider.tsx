@@ -50,7 +50,7 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
           <div className="custom-slider">
             <div className="custom-slider-left">
               <div className="custom-slider-big-text flex">
-                <div className="h1 slider-text-white text-cta mt-[2px]">
+                <div className="h1 slider-text-white text-cta mt-[2px] flex">
                   <span className="h1 slider-text-secondary text-cta-yellow">
                     100%
                   </span>
