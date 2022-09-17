@@ -113,3 +113,63 @@
   background-color: white;
   width: 50px;
 }
+
+/* Small Devices */
+@media (max-width: 600px) {
+  .custom-slider {
+    min-height: 708px;
+    width: 100%;
+    display: flex;
+    background-color: #f07800;
+  }
+  .custom-slider-big-text {
+    display: inline-block;
+    width: 400px;
+    text-align: start;
+  }
+  .custom-slider-left {
+    padding-top: 72px;
+    padding-left: 20px;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.5rem;
+    padding-left: 16px;
+  }
+  .custom-slider-right {
+    padding-top: 160px;
+    flex: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 90px;
+    position: absolute;
+    margin-top: 28vh;
+  }
+  .text-cta {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .one-hundred-percent {
+    text-align: center;
+    position: unset;
+    top: unset;
+    width: 100vw;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 39vw;
+    bottom: 44vh;
+    left: 0;
+    display: flex;
+  }
+  .img-gau {
+    width: 100vw;
+    right: unset;
+    height: 100%;
+    bottom: -50%;
+  }
+  .slider-btn-cta {
+    height: 56px;
+  }
+}

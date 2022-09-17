@@ -24,15 +24,27 @@ export type AppButtonProps = {
   width?: string;
   label?: ReactNode;
   style: 'light' | 'dark';
+  className?: string;
   click: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
   (
-    { children, type, bgColor, size, icon, disabled, label, style, click },
+    {
+      children,
+      type,
+      bgColor,
+      size,
+      icon,
+      disabled,
+      label,
+      style,
+      click,
+      className
+    },
     ref
   ) => {
-    const custom = `${style} custom-button`;
+    const custom = `${style} custom-button ${className}`;
     return (
       <Button
         disableFocusRipple={false}

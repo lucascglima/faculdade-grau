@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,8 +10,13 @@ import { Pagination } from 'swiper';
 import 'swiper/css';
 import * as React from 'react';
 import gau from '../../assets/img/gau-super-feliz.png';
+import gauMobile from '../../assets/img/gau-super-feliz-mobile-2.png';
 import foto from '../../assets/img/Banner.png';
 import AppButton from '@/components/button/AppButton';
+import { useTheme } from '@mui/material/styles';
+import { breakpoints } from '@mui/system';
+import { useMediaQuery } from '@mui/material';
+
 export type ChipType = 'light' | 'dark';
 export type AppProps = {
   color?: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning';
@@ -30,8 +35,11 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
       }
     };
     const clickCta = () => {
-      console.log('click cta');
+      console.log('click cta', window.matchMedia('(max-width: 600px)').matches);
     };
+
+    const match = useMediaQuery('(min-width:600px)');
+
     return (
       <Swiper
         pagination={pagination}
@@ -59,6 +67,7 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
                   size="large"
                   style="dark"
                   label="Inscreva-se agora"
+                  className="slider-btn-cta"
                   icon={true}
                   click={clickCta}
                 />
@@ -68,7 +77,7 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
               <div className="one-hundred-percent">100%</div>
             </div>
             <div className="img-gau">
-              <Image src={gau} />
+              <Image src={match ? gau : gauMobile} />
             </div>
           </div>
         </SwiperSlide>

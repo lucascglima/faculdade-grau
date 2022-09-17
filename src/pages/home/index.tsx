@@ -3,7 +3,9 @@ import AppSliders from '../../components/slider/AppSlider';
 
 const HomePage = () => (
   <Layout title="Home">
-    <AppSliders />
+    <div className="slider-home">
+      <AppSliders />
+    </div>
   </Layout>
 );
 
