@@ -66,7 +66,10 @@ const HomePage = () => (
       </div>
     </div>
     <div className="ours-courses-home">
-      <div className="big-number">Nossos cursos</div>
+      <div className="big-number title-desktop">Nossos cursos</div>
+      <div className="big-number  title-mobile">
+        Nossos <br /> cursos
+      </div>
       <div className="tag-list-home">
         <AppTag
           label="Todos"
@@ -136,8 +139,8 @@ const HomePage = () => (
           bgColor="secondary"
           size="large"
           style="dark"
-          label="Inscreva-se agora"
-          className="slider-btn-cta"
+          label="Inscreva-se Agora "
+          className="button-ours-courses-cta"
           icon={true}
           click={buttonClick}
         />
@@ -192,6 +195,7 @@ const HomePage = () => (
         />
       </div>
     </div>
+    <div className="video">video</div>
   </Layout>
 );
 
