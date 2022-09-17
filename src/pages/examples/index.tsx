@@ -2,7 +2,20 @@ import Layout from '@/layouts/default';
 import AppButton from '@/components/button/AppButton';
 import AppTag from '@/components/tag/AppTag';
 import AppLink from '@/components/link/AppLink';
+import AppButtonCta from './../../components/button/AppButtonCta';
 
+const clickCta = () => {
+  console.log('clickou no cta');
+};
+const clickBtn = () => {
+  console.log('clickou no Botão');
+};
+const clickTag = () => {
+  console.log('clickou na Tag');
+};
+const clickLick = () => {
+  console.log('clickou no Link');
+};
 const ExamplesPage = () => (
   <Layout title="Examples  | Faculdade Grau">
     <div>Examples Light</div>
@@ -13,6 +26,7 @@ const ExamplesPage = () => (
       label="Desabilitado Dark Primary"
       disabled={true}
       style="light"
+      click={clickBtn}
     />
     <AppButton
       type="contained"
@@ -20,6 +34,7 @@ const ExamplesPage = () => (
       size="small"
       style="light"
       label="Secondary light Default"
+      click={clickBtn}
     />
     <div>Examples Dark</div>
     <AppButton
@@ -28,6 +43,7 @@ const ExamplesPage = () => (
       size="large"
       label="Primary Dark Default"
       style="dark"
+      click={clickBtn}
     />
     <AppButton
       type="contained"
@@ -37,6 +53,7 @@ const ExamplesPage = () => (
       style="dark"
       label="Desabilitado Secondary Dark "
       icon={true}
+      click={clickBtn}
     />
     <div>Examples Chips</div>
 
@@ -46,6 +63,7 @@ const ExamplesPage = () => (
       color="primary"
       disabled={true}
       style="dark"
+      click={clickTag}
     />
     <AppTag
       label="Chip Dark"
@@ -53,6 +71,7 @@ const ExamplesPage = () => (
       color="primary"
       disabled={false}
       style="dark"
+      click={clickTag}
     />
     <AppTag
       label="Chip light"
@@ -60,6 +79,7 @@ const ExamplesPage = () => (
       color="primary"
       disabled={true}
       style="light"
+      click={clickTag}
     />
     <AppTag
       label="Chip light"
@@ -67,13 +87,49 @@ const ExamplesPage = () => (
       color="primary"
       disabled={false}
       style="light"
+      click={clickTag}
     />
-    <div>Examples Chips</div>
+    <div>Examples Link</div>
 
-    <AppLink href="#" label="Link Dark" disabled={true} style="dark" />
-    <AppLink href="#" label="Link Dark" disabled={false} style="dark" />
-    <AppLink href="#" label="Link light" disabled={true} style="light" />
-    <AppLink href="#" label="Link light" disabled={false} style="light" />
+    <AppLink
+      href="#"
+      label="Link Dark"
+      color="info"
+      disabled={true}
+      style="dark"
+      click={clickLick}
+    />
+    <AppLink
+      href="#"
+      label="Link Dark"
+      color="info"
+      disabled={false}
+      style="dark"
+      click={clickLick}
+    />
+    <AppLink
+      href="#"
+      label="Link light"
+      color="info"
+      disabled={true}
+      style="light"
+      click={clickLick}
+    />
+    <AppLink
+      href="#"
+      label="Link light"
+      color="info"
+      disabled={false}
+      style="light"
+      click={clickLick}
+    />
+
+    <div>Examples Button CTA</div>
+    <AppButtonCta
+      label="Compre agora"
+      clickleft={clickCta}
+      clickright={clickCta}
+    />
   </Layout>
 );
 

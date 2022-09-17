@@ -9,10 +9,11 @@ export type AppTagProps = {
   style: ChipType;
   disabled?: boolean;
   label: string;
+  click?: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
 const AppTag = React.forwardRef<HTMLAnchorElement, AppTagProps>(
-  ({ children, type, disabled, label, style, color }, ref) => {
+  ({ children, type, disabled, label, style, color, click }, ref) => {
     const customStyle = !disabled
       ? `${style} custom-tag smaller `
       : `${style} custom-tag smaller custom-disabled-tag `;
@@ -23,6 +24,7 @@ const AppTag = React.forwardRef<HTMLAnchorElement, AppTagProps>(
         color={color}
         disabled={disabled}
         className={customStyle}
+        onClick={click}
       />
     );
   }

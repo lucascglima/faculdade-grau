@@ -1,0 +1,13 @@
+.custom-button-cta {
+  display: flex;
+  width: min-content;
+  gap: 48px;
+  background-color: theme('colors.primary');
+  padding: 8px 0px;
+  min-height: 36px;
+  border-radius: 1000px;
+  color: white;
+}
+.custom-icon-button-cta > svg {
+  color: white;
+}

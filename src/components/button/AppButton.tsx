@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
 import Button from '@mui/material/Button';
-// import '@/style/components/AppButton.css';
-
 import ArrowForwardOutlined from '@mui/icons-material/ArrowForwardOutlined';
+import ArrowBackOutlined from '@mui/icons-material/ArrowBackOutlined';
 import type { TailwindColors } from '../../types';
 export type ButtonType = 'text' | 'outlined' | 'contained';
 export type ButtonColorText = TailwindColors;
@@ -20,15 +19,19 @@ export type AppButtonProps = {
     | 'info'
     | 'warning';
   size: ButtonSizes;
-  icon?: boolean;
+  icon?: boolean | 'double';
   disabled?: boolean;
   width?: string;
   label?: ReactNode;
   style: 'light' | 'dark';
+  click: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
-  ({ children, type, bgColor, size, icon, disabled, label, style }, ref) => {
+  (
+    { children, type, bgColor, size, icon, disabled, label, style, click },
+    ref
+  ) => {
     const custom = `${style} custom-button`;
     return (
       <Button
@@ -40,8 +43,10 @@ const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
         disabled={disabled}
         size={size}
         endIcon={icon ? <ArrowForwardOutlined /> : ''}
+        startIcon={icon == 'double' ? <ArrowBackOutlined /> : ''}
+        onClick={click}
       >
-        {label}
+        <span className="custom-button-label">{label}</span>
       </Button>
     );
   }

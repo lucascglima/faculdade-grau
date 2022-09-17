@@ -1,6 +1,7 @@
 .MuiButton-root {
   color: #312f31;
   border-radius: 1000px !important;
+  gap: 48px;
 }
 
 .MuiButton-sizeSmall.MuiButton-sizeSmall {

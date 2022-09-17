@@ -9,16 +9,22 @@ export type AppLinkProps = {
   disabled?: boolean;
   label: string;
   href: string;
+  click?: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
 const AppLink = React.forwardRef<HTMLAnchorElement, AppLinkProps>(
-  ({ href, disabled, label, style, color }, ref) => {
+  ({ href, disabled, label, style, color, click }, ref) => {
     const customLinkStyle = disabled
       ? `custom-link custom-disabled-link  body ${style}`
       : `custom-link body ${style}`;
 
     return (
-      <Link href={href} underline="none" className={customLinkStyle}>
+      <Link
+        href={href}
+        underline="none"
+        className={customLinkStyle}
+        onClick={click}
+      >
         {label}
         <ChevronRightOutlined fontSize="medium" className="custom-link-icon" />
       </Link>

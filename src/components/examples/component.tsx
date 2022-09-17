@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+
 export type ChipType = 'light' | 'dark';
 
 export type AppProps = {
@@ -12,7 +15,16 @@ export type AppProps = {
 
 const AppExample = React.forwardRef<HTMLAnchorElement, AppProps>(
   ({ children, type, disabled, label, style, color }, ref) => {
-    return <div>exemplo</div>;
+    return (
+      <ButtonGroup
+        variant="contained"
+        aria-label="outlined primary button group"
+      >
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    );
   }
 );
 
