@@ -1,5 +1,5 @@
 .custom-tag:not(.custom-disabled-tag) {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .custom-tag.light.custom.disabled-tag {
   background-color: #000000;
@@ -16,4 +16,10 @@
 }
 .custom-tag.dark > span {
   color: theme('colors.dark') !important;
+}
+.custom-disabled-tag {
+  background: theme('colors.light-opacity-20') !important;
+  color: theme('colors.dark') !important;
+  cursor: pointer;
+  opacity: 1 !important;
 }
