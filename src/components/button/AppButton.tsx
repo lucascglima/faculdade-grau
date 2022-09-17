@@ -35,7 +35,7 @@ const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
     const custom = `${style} custom-button`;
     return (
       <Button
-        disableFocusRipple={true}
+        disableFocusRipple={false}
         disableElevation={true}
         variant={type}
         className={custom}

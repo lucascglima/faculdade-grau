@@ -70,7 +70,7 @@ const theme = createTheme({
               ':hover': {
                 backgroundColor: '#FEC906',
                 border: '1px solid #312F31',
-                'box-shadow': 'none'
+                boxShadow: 'none'
               },
               ':focus': {
                 color: '#FFFFFF'

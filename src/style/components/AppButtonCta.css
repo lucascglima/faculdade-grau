@@ -7,6 +7,7 @@
   min-height: 36px;
   border-radius: 1000px;
   color: white;
+  text-align: center;
 }
 .custom-icon-button-cta > svg {
   color: white;

@@ -3,6 +3,7 @@ import AppButton from '@/components/button/AppButton';
 import AppTag from '@/components/tag/AppTag';
 import AppLink from '@/components/link/AppLink';
 import AppButtonCta from './../../components/button/AppButtonCta';
+import AppSliders from '../../components/slider/AppSlider';
 
 const clickCta = () => {
   console.log('clickou no cta');
@@ -130,6 +131,8 @@ const ExamplesPage = () => (
       clickleft={clickCta}
       clickright={clickCta}
     />
+    <div>Examples Button CTA</div>
+    <AppSliders />
   </Layout>
 );
 
