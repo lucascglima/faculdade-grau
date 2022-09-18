@@ -14,6 +14,11 @@ import gauNeedHelp from '../../assets/img/gau-need-help.png';
 import coursesCardImage from '../../assets/img/ours-courses-card-image.png';
 import coursesCardImage2 from '../../assets/img/ours-courses-card-image-2.png';
 import coursesCardImage3 from '../../assets/img/ours-courses-card-image-3.png';
+import brazilMap from '../../assets/img/brazil-map.png';
+import jobAgency from '../../assets/img/job-agency.png';
+import empoloyersHome from '../../assets/img/empoloyers-home.png';
+import studentCourse from '../../assets/img/student-course-match.png';
+import prouniImage from '../../assets/img/prouni.png';
 import AppTag from '@/components/tag/AppTag';
 import AppButton from '@/components/button/AppButton';
 import Qrcode from '@mui/icons-material/QrCodeOutlined';
@@ -195,7 +200,135 @@ const HomePage = () => (
         />
       </div>
     </div>
-    <div className="video">video</div>
+    <div className="video-home">video</div>
+
+    <div className="units-home">
+      <div className="col-first-units-home">
+        <div className="text-units-home">
+          <div className="big-number text-quantity-units-home text-secondary">
+            80 unidades
+          </div>
+          <div className="big-number text-part-two-units-home">
+            presente em todo o Brasil
+          </div>
+        </div>
+        <div className="box-buttons-units-home">
+          <AppButton
+            type="contained"
+            bgColor="secondary"
+            size="large"
+            style="light"
+            className="buttons-units-home"
+            label="Conheça nossos polos"
+            click={buttonClick}
+          />
+          <AppButton
+            type="contained"
+            bgColor="primary"
+            size="large"
+            style="light"
+            className="buttons-units-home"
+            label="Inscreva-se agora"
+            icon={true}
+            click={buttonClick}
+          />
+        </div>
+      </div>
+      <div className="col-second-units-home">
+        <div className=" brazil-image-units-home">
+          <Image src={brazilMap} />
+        </div>
+      </div>
+    </div>
+    <div className="choose-course-home">
+      <div className="box-img-choose-course-home">
+        <div className="img-choose-course-home">
+          <Image src={empoloyersHome} />
+        </div>
+      </div>
+      <div className="box-text-choose-course-home">
+        <div className="agency-choose-course-home">
+          <Image src={jobAgency} />
+        </div>
+        <div className="title-text-choose-course-home h1">
+          Conquiste seu primeiro emprego de forma rápida
+        </div>
+        <div className="text-choose-course-home body">
+          Encaminhamento para emprego e estágio dos alunos do Grau Educacional.
+        </div>
+        <div className="box-button-choose-course-home ">
+          <AppButton
+            type="contained"
+            bgColor="secondary"
+            size="large"
+            style="light"
+            className="button-choose-course-home"
+            label="Saiba mais"
+            icon={true}
+            click={buttonClick}
+          />
+        </div>
+      </div>
+    </div>
+    <div className="course-match-home">
+      <div className="course-match-text">
+        <div className="box-text-course-match big-number">
+          <div className="text-course-match big-number">
+            Qual <span className="text-primary">curso</span> combina mais com
+            você
+          </div>
+          <div className="box-button-course-match ">
+            <AppButton
+              type="contained"
+              bgColor="primary"
+              size="large"
+              style="light"
+              className="button-course-match"
+              label="Saiba mais"
+              icon={true}
+              click={buttonClick}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="box-image-course-match">
+        <Image src={studentCourse} />
+      </div>
+    </div>
+    <div className="prouni-home">
+      <div className="box-image-prouni-home">
+        <Image src={prouniImage} />
+      </div>
+      <div className="box-text-prouni-home">
+        <div className="title-text-prouni-home h1">
+          E o melhor: tudo isso cabe no seu bolso!
+        </div>
+        <div className="text-prouni-home body ">
+          No Grau, você estuda sem preocupações. Conheça as soluções financeiras
+          pensadas especialmente para você.
+        </div>
+        <div className="box-buttons-prouni-home">
+          <AppButton
+            type="contained"
+            size="small"
+            style="light"
+            className="buttons-prouni-home btn-white"
+            label="Fazer Teste"
+            click={buttonClick}
+          />
+          <AppButton
+            type="contained"
+            bgColor="secondary"
+            size="small"
+            style="dark"
+            className="buttons-prouni-home"
+            label="Inscreva-se agora"
+            icon={true}
+            click={buttonClick}
+          />
+        </div>
+      </div>
+    </div>
   </Layout>
 );
 
