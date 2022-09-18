@@ -375,6 +375,12 @@ input {
   }
 }
 @media (max-width: 600px) {
+  .units-home,
+  .choose-course-home,
+  .course-match-home,
+  .prouni-home {
+    display: none;
+  }
   .title-desktop {
     display: none;
   }
