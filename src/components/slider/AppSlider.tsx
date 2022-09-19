@@ -13,8 +13,6 @@ import gau from '../../assets/img/gau-super-feliz.png';
 import gauMobile from '../../assets/img/gau-super-feliz-mobile-2.png';
 import foto from '../../assets/img/Banner.png';
 import AppButton from '@/components/button/AppButton';
-import { useTheme } from '@mui/material/styles';
-import { breakpoints } from '@mui/system';
 import { useMediaQuery } from '@mui/material';
 
 export type ChipType = 'light' | 'dark';
@@ -50,7 +48,7 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
           <div className="custom-slider">
             <div className="custom-slider-left">
               <div className="custom-slider-big-text flex">
-                <div className="h1 slider-text-white text-cta mt-[2px] flex">
+                <div className="h1 slider-text-white text-cta mt-[2px] ">
                   <span className="h1 slider-text-secondary text-cta-yellow">
                     100%
                   </span>

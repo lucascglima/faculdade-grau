@@ -4,3 +4,6 @@
 @import '../lib/mui/mui.css';
 @import './components/index.css';
 @import './pages/index.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
