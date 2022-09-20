@@ -43,10 +43,7 @@ const ResponsiveAppBar = () => {
     <AppBar position="static" color="inherit" className="">
       <Container maxWidth="xl">
         <Toolbar>
-          <Box
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-            className="bg-primary"
-          >
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"

@@ -18,14 +18,18 @@ import brazilMap from '../../assets/img/brazil-map.png';
 import jobAgency from '../../assets/img/job-agency.png';
 import empoloyersHome from '../../assets/img/empoloyers-home.png';
 import studentCourse from '../../assets/img/student-course-match.png';
+import studentCourseMobile from '../../assets/img/student-course-match-mobile.png';
 import prouniImage from '../../assets/img/prouni.png';
 import AppTag from '@/components/tag/AppTag';
 import AppButton from '@/components/button/AppButton';
 import Qrcode from '@mui/icons-material/QrCodeOutlined';
+import { useMediaQuery } from '@mui/material';
 
 const buttonClick = () => {
   console.log('click');
 };
+
+// const match = useMediaQuery('(min-width:600px)');
 const HomePage = () => (
   <Layout title="Home">
     <div className="slider-home">
@@ -113,7 +117,7 @@ const HomePage = () => (
         </Card>
         <Card className="ours-courses-card secondary">
           <CardContent className="ours-courses-card-content">
-            <div className="ours-courses-card-chip body">Tecnologiua</div>
+            <div className="ours-courses-card-chip body">Tecnologia</div>
             <div className="ours-courses-card-title">
               Engenharia de produção
             </div>
@@ -212,7 +216,7 @@ const HomePage = () => (
             presente em todo o Brasil
           </div>
         </div>
-        <div className="box-buttons-units-home">
+        <div className="box-buttons-units-home desktop">
           <AppButton
             type="contained"
             bgColor="secondary"
@@ -235,6 +239,27 @@ const HomePage = () => (
         </div>
       </div>
       <div className="col-second-units-home">
+        <div className="box-buttons-units-home-mobile mobile">
+          <AppButton
+            type="contained"
+            bgColor="secondary"
+            size="large"
+            style="light"
+            className="buttons-units-home"
+            label="Conheça nossos polos"
+            click={buttonClick}
+          />
+          <AppButton
+            type="contained"
+            bgColor="primary"
+            size="large"
+            style="light"
+            className="buttons-units-home-two"
+            label="Inscreva-se agora"
+            icon={true}
+            click={buttonClick}
+          />
+        </div>
         <div className=" brazil-image-units-home">
           <Image src={brazilMap} />
         </div>
@@ -292,7 +317,7 @@ const HomePage = () => (
         </div>
       </div>
       <div className="box-image-course-match">
-        <Image src={studentCourse} />
+        <Image src={studentCourse} className="image-course-match" />
       </div>
     </div>
     <div className="prouni-home">
