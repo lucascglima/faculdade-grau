@@ -623,10 +623,6 @@ input {
     flex-direction: column;
     gap: 16px;
   }
-  .custom-button {
-    max-height: 56px;
-    width: 320px;
-  }
 
   .buttons-units-home {
     justify-content: space-between;
