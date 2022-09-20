@@ -18,8 +18,8 @@ const Layout = ({ children, title = 'Faculdade Grau' }: Props) => (
     </header>
     <main>{children}</main>
     <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
+      {/* <hr />
+      <span>I'm here to stay (Footer)</span> */}
     </footer>
   </div>
 );

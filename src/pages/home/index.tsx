@@ -64,15 +64,6 @@ const HomePage = () => (
           </div>
         </div>
       </div>
-      <div className="need-help-box-home">
-        <div className="need-help-image-home">
-          <Image src={gauNeedHelp} />
-        </div>
-        <div className="need-help-text-home body">
-          Precisa de <br />
-          ajuda ?
-        </div>
-      </div>
     </div>
     <div className="ours-courses-home">
       <div className="big-number title-desktop">Nossos cursos</div>
@@ -335,7 +326,7 @@ const HomePage = () => (
         <div className="box-buttons-prouni-home">
           <AppButton
             type="contained"
-            size="small"
+            size="large"
             style="light"
             className="buttons-prouni-home btn-white"
             label="Fazer Teste"
@@ -344,7 +335,7 @@ const HomePage = () => (
           <AppButton
             type="contained"
             bgColor="secondary"
-            size="small"
+            size="large"
             style="dark"
             className="buttons-prouni-home"
             label="Inscreva-se agora"

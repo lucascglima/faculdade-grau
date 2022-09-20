@@ -39,6 +39,7 @@ const theme = createTheme({
           ...(ownerState.variant === 'contained' &&
             ownerState.color === 'primary' && {
               backgroundColor: '#F07800',
+              border: '1px solid transparent',
               ':hover': {
                 backgroundColor: '#F07800',
                 border: '1px solid #312F31',
@@ -67,6 +68,7 @@ const theme = createTheme({
           ...(ownerState.variant === 'contained' &&
             ownerState.color === 'secondary' && {
               backgroundColor: '#FEC906',
+              border: '1px solid transparent',
               ':hover': {
                 backgroundColor: '#FEC906',
                 border: '1px solid #312F31',

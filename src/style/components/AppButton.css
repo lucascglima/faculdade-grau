@@ -1,5 +1,5 @@
 .MuiButton-root {
-  color: #312f31;
+  color: #ffffff;
   border-radius: 1000px !important;
   gap: 48px;
 }
@@ -10,11 +10,41 @@
 .MuiButton-sizeLarge.MuiButton-sizeLarge {
   padding: 20px;
 }
-
+.custom-button {
+  border: 1px solid transparent;
+}
 .custom-button.light {
+  color: theme('colors.white');
+}
+.custom-button.light:hover,
+.custom-button.light:focus,
+.custom-button.light:active {
+  color: theme('colors.dark');
+  border-color: theme('colors.dark');
+}
+.custom-button.dark:focus,
+.custom-button.dark:active {
+  color: theme ('colors.white');
+  border: 1px solid theme('colors.white');
+}
+.custom-button.light:focus,
+.custom-button.light:active {
+  border: 1px solid theme('colors.dark');
   color: theme('colors.white');
 }
 .btn-white {
   color: theme('colors.primary') !important;
   background-color: theme('colors.white') !important;
+}
+.custom-button.dark:hover {
+  border-color: theme('colors.dark');
+}
+
+.custom-button:hover {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+@media (max-width: 600px) {
+  .MuiButton-sizeLarge.MuiButton-sizeLarge {
+    height: 56px !important;
+  }
 }

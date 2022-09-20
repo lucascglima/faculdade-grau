@@ -3,9 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image, { StaticImageData } from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
+// import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 // import required modules
-import { Pagination } from 'swiper';
+// import { Pagination } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
 import * as React from 'react';
@@ -14,7 +16,7 @@ import gauMobile from '../../assets/img/gau-super-feliz-mobile-2.png';
 import foto from '../../assets/img/Banner.png';
 import AppButton from '@/components/button/AppButton';
 import { useMediaQuery } from '@mui/material';
-
+import { Autoplay, Navigation } from 'swiper';
 export type ChipType = 'light' | 'dark';
 export type AppProps = {
   color?: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning';
@@ -32,6 +34,7 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
         return '<span class="' + className + '">' + (index + 1) + '</span>';
       }
     };
+
     const clickCta = () => {
       console.log('click cta', window.matchMedia('(max-width: 600px)').matches);
     };
@@ -40,8 +43,9 @@ const AppSliders = React.forwardRef<HTMLAnchorElement, AppProps>(
 
     return (
       <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
+        loop={true}
+        navigation={true}
+        modules={[Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>

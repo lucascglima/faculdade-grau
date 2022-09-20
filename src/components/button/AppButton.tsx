@@ -44,7 +44,10 @@ const AppButton = React.forwardRef<HTMLAnchorElement, AppButtonProps>(
     },
     ref
   ) => {
-    const custom = `${style} custom-button ${className}`;
+    const custom =
+      icon == true
+        ? `${style} custom-button justify-between ${className}`
+        : `${style} custom-button 	 ${className}`;
     return (
       <Button
         disableFocusRipple={false}

@@ -11,6 +11,8 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { EmotionCache } from '@emotion/react';
 import { StyledEngineProvider } from '@mui/material';
+import gauNeedHelp from '../assets/img/gau-need-help.png';
+import Image from 'next/image';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -33,6 +35,15 @@ const MyApp = ({
       <ThemeProvider theme={theme}>
         {/* <CssBaseline /> */}
         <Component {...pageProps} />
+        <div className="need-help-box-home">
+          <div className="need-help-image-home">
+            <Image src={gauNeedHelp} />
+          </div>
+          <div className="need-help-text-home body">
+            Precisa de <br />
+            ajuda ?
+          </div>
+        </div>
       </ThemeProvider>
       {/* </CacheProvider> */}
     </StyledEngineProvider>
